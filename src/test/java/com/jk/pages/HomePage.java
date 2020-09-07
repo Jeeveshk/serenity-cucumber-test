@@ -7,11 +7,7 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class HomePage extends PageObject{
 	
-	//This will Launch the application
-	public void lunchApp(){
-		$(By.id("home_img_holder")).click();
-	}
-	
+
 	//This will select the string on the application
 	public void searchStr(){
 		$(By.cssSelector(".imdb-header-search__input")).typeAndEnter("Game of thrones");

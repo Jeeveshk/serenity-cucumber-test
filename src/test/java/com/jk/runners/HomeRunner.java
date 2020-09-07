@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/open_select.feature",
+@CucumberOptions(features = "src/test/resources/features",
 					glue = "com.jk")
 public class HomeRunner {
 

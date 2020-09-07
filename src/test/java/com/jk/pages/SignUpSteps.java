@@ -17,23 +17,23 @@ public class SignUpSteps {
 	}
 	
 	@Step
-	public void uName(){
-		reg.username();
+	public void uName(String uName){
+		reg.username(uName);
 	}
 	
 	@Step
-	public void emailId(){
-		reg.email();
+	public void emailId(String email){
+		reg.email(email);
 	}
 	
 	@Step
-	public void pwd(){
-		reg.password();
+	public void pwd(String pwd){
+		reg.password(pwd);
 	}
 	
 	@Step
-	public void repwd(){
-		reg.repasswrd();
+	public void repwd(String pwd){
+		reg.repasswrd(pwd);
 	}
 	
 	@Step

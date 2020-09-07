@@ -1,7 +1,11 @@
 package com.jk.stepdefinitions;
 
+import java.util.List;
+import java.util.Map;
+
 import com.jk.pages.SignUpSteps;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Steps;
@@ -22,17 +26,16 @@ public class SignUp {
 		regStp.createAcctBtn();
 	}
 
-	@When("fills in the details")
-	public void filles_in_the_details() {
-		regStp.uName();
-		regStp.emailId();
-		regStp.pwd();
-		regStp.repwd();
+	@Then("fills in the details and sign up")
+	public void fills_in_the_details_and_sign_up(DataTable dt) {
+		List<Map<String, String>> lst = dt.asMaps(String.class, String.class);
+		for(int i=0;i<lst.size();i++)
+		{
+			regStp.uName(lst.get(i).get("username"));
+			regStp.emailId(lst.get(i).get("email"));
+			regStp.pwd(lst.get(i).get("passwrd"));
+			regStp.repwd(lst.get(i).get("passwrd"));
+			regStp.cntnBtn();
+		}
 	}
-
-	@Then("he signs up")
-	public void he_signs_up() {
-		regStp.cntnBtn();
-	}
-
 }

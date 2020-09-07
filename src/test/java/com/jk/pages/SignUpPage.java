@@ -16,23 +16,23 @@ public class SignUpPage extends PageObject {
 	}
 	
 	//This will enter username
-	public void username(){
-		$(By.id("ap_customer_name")).type("jk");
+	public void username(String username){
+		$(By.id("ap_customer_name")).type(username);
 	}
 	
 	//This will enter email
-	public void email(){
-		$(By.id("ap_email")).type("jk@gmail.com");
+	public void email(String email){
+		$(By.id("ap_email")).type(email);
 	}
 	
 	//This will enter password
-	public void password(){
-		$(By.id("ap_password")).type("qwert1234");
+	public void password(String password){
+		$(By.id("ap_password")).type(password);
 	}
 	
 	//This will re-enter password
-	public void repasswrd(){
-		$(By.id("ap_password_check")).type("qwert1234");
+	public void repasswrd(String password){
+		$(By.id("ap_password_check")).type(password);
 	}
 	
 	//This will click on continue/signup button
